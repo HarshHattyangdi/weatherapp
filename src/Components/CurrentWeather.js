@@ -32,6 +32,7 @@ function CurrentWeather() {
     //   .catch((err) => console.log(err));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lat, long]);
+
   const getData = (e) => {
     e.preventDefault();
     let finalEndpointCity = `${BASE_URL}q=${city}&units=metric&appid=${KEY}`;
