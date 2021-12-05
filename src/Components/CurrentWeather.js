@@ -7,6 +7,7 @@ function CurrentWeather() {
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
   const [city, setCity] = useState(null);
+  const [cityInput, setCityInput] = useState(city);
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -30,18 +31,39 @@ function CurrentWeather() {
     //   .then((res) => console.log(res))
     //   .catch((err) => console.log(err));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lat, long, city]);
-  //   useEffect(() => {}, []);
+  }, [lat, long]);
+  const getData = (e) => {
+    e.preventDefault();
+    let finalEndpointCity = `${BASE_URL}q=${city}&units=metric&appid=${KEY}`;
+    console.log(finalEndpointCity);
+
+    fetch(finalEndpointCity)
+      .then((res) => res.json())
+      .then((result) => {
+        setData(result.main);
+        setCity(cityInput);
+        console.log(data);
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <div>
-      <form>
-        <input type="text" name="" id="" placeholder="Enter City" />
+      <form onSubmit={(e) => getData(e)}>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Enter City"
+          required
+          onChange={(e) => {
+            setCityInput(e.target.value);
+          }}
+        />
         <input type="submit" value="Get Details" />
       </form>
-
       {data && city && (
         <div>
-          <h2>{city}</h2>
+          <h2>{city.toUpperCase()}</h2>
           {Object.keys(data).map((key, i) => (
             <li key={i}>
               <span>
