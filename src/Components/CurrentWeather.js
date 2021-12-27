@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import InputDebounce from "./InputDebounce";
 
 function CurrentWeather() {
   const KEY = process.env.REACT_APP_API_KEY;
@@ -21,10 +22,22 @@ function CurrentWeather() {
       .catch((err) => console.log(err));
   }, [KEY, BASE_URL, city]); //This hook is only run when the value of city is updated, since KEY and BASEURL remain constants they can be removed as well from the dependency array
 
+  const changeHandler = () => {
+    //Sets Data to null value
+    setData(null);
+  };
   return (
     <div>
       <h3>Current Weather of {city.toUpperCase()}</h3>
-      {<pre>{JSON.stringify(data, null, 2)}</pre>}
+
+      <InputDebounce
+        type="text"
+        placeholder="Enter City"
+        onChange={changeHandler}
+        setCity={setCity}
+      />
+
+      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
     </div>
   );
 }
