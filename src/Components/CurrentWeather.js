@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import InputDebounce from "./InputDebounce";
 import "../style/index.scss";
+import CityWeather from "./CityWeather";
 
 function CurrentWeather() {
   const KEY = process.env.REACT_APP_API_KEY;
@@ -38,11 +39,7 @@ function CurrentWeather() {
         setCity={setCity}
       />
 
-      {data && (
-        <pre className="colored-background">
-          {JSON.stringify(data, null, 2)}
-        </pre>
-      )}
+      {data && <CityWeather {...data} />}
     </div>
   );
 }

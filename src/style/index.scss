@@ -1,5 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Poppins:wght@100;300&display=swap");
+
 $mycolor: aquamarine;
 
-.colored-background{
-    background-color: $mycolor;
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.colored-background {
+  background-color: $mycolor;
+}
+
+.card {
+  margin: 10%;
+}
+
+.nav-bar {
+  background-color: beige;
+  font-weight: 900;
+}
+
+.brand {
+  margin: 1%;
 }

@@ -5,7 +5,9 @@ import CurrentWeather from "./Components/CurrentWeather";
 function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
+      <h1 className="nav-bar">
+        <span className="brand">Weather App</span>
+      </h1>
 
       <CurrentWeather />
     </div>
