@@ -12,6 +12,7 @@ const CityWeather = (props) => {
           return (
             <li key={main[el] + idx}>
               {el}:{main[el]}
+              Test
             </li>
           );
         })}
