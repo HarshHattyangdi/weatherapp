@@ -12,7 +12,7 @@ function CurrentWeather() {
 
   useEffect(() => {
     const generateRequestString = () => {
-      let generatedString = BASE_URL + `q=${city}&appid=${KEY}`;
+      let generatedString = BASE_URL + `q=${city}&appid=${KEY}&units=metric`;
       return generatedString;
     };
     fetch(generateRequestString())

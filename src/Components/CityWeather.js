@@ -1,22 +1,36 @@
 const CityWeather = (props) => {
-  //   console.log(props);
+  console.log(props);
   const main = props.main;
-  //   console.log(main);
+  // console.log(main);
+  let min = main.temp_min;
+  let max = main.temp_max;
+  let feels_like = main.feels_like;
+  let icon = props.weather[0].icon;
+  console.log(icon);
 
-  const weather = props.weather;
+  // const weather = props.weather;
   //   console.log(weather);
   return (
     <div>
-      <ul>
+      <h2>
+        <img
+          src={`http://http://openweathermap.org/img/w/${icon}.png`}
+          alt=""
+        />
+      </h2>
+      <h2>Feels like: {feels_like}</h2>
+      <h2>Min:{min}</h2>
+      <h2>Max:{max}</h2>
+
+      {/* <ul>
         {Object.keys(main).map((el, idx) => {
           return (
             <li key={main[el] + idx}>
               {el}:{main[el]}
-              Test
             </li>
           );
         })}
-      </ul>
+      </ul> */}
       {/* <ul>
         {Object.keys(weather.0).map((el, idx) => {
           return (
@@ -26,7 +40,7 @@ const CityWeather = (props) => {
           );
         })}
       </ul> */}
-      {JSON.stringify(weather)}
+      {/* {JSON.stringify(weather)} */}
     </div>
   );
 };
