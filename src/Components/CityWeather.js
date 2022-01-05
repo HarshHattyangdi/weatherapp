@@ -12,12 +12,12 @@ const CityWeather = (props) => {
   //   console.log(weather);
   return (
     <div>
-      <h2>
+      {/* <h2>
         <img
           src={`http://http://openweathermap.org/img/w/${icon}.png`}
           alt=""
         />
-      </h2>
+      </h2> */}
       <h2>Feels like: {feels_like}</h2>
       <h2>Min:{min}</h2>
       <h2>Max:{max}</h2>

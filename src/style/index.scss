@@ -15,11 +15,16 @@ $mycolor: aquamarine;
 
 .card {
   margin: 10%;
+  padding:5%;
+  background-color: red;
+  border-radius:10%;
+  text-align: center;
 }
 
-.nav-bar {
-  background-color: beige;
-  font-weight: 900;
+.transparent-bg{
+  // text-decoration: line-through;
+    background: rgba(255,255,255,0.4);
+
 }
 
 .brand {

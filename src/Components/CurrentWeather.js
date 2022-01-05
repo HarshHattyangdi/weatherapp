@@ -3,7 +3,8 @@ import InputDebounce from "./InputDebounce";
 import "../style/index.scss";
 import CityWeather from "./CityWeather";
 
-function CurrentWeather() {
+function CurrentWeather(props) {
+  console.log(`Current Weather Props:`, props);
   const KEY = process.env.REACT_APP_API_KEY;
   const BASE_URL = process.env.REACT_APP_BASE_URL;
 
@@ -29,12 +30,13 @@ function CurrentWeather() {
     setData(null);
   };
   return (
-    <div>
+    <div className={props.className}>
       <h3>Current Weather of {city.toUpperCase()}</h3>
 
       <InputDebounce
         type="text"
         placeholder="Enter City"
+        className="transparent-bg"
         onChange={changeHandler}
         setCity={setCity}
       />

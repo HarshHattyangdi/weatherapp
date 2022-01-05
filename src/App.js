@@ -1,15 +1,16 @@
 // import axios from "axios";
 // import { useState, useEffect } from "react";
 import CurrentWeather from "./Components/CurrentWeather";
+// import "./style/index.scss";
+
+// const sampleStyle = {
+//   backgroundColor: "blue",
+// };
 
 function App() {
   return (
     <div className="App">
-      <h1 className="nav-bar">
-        <span className="brand">Weather App</span>
-      </h1>
-
-      <CurrentWeather />
+      <CurrentWeather className="card" />
     </div>
   );
 }
