@@ -31,7 +31,7 @@ function CurrentWeather(props) {
   };
   return (
     <div className={props.className}>
-      <h3>Current Weather of {city.toUpperCase()}</h3>
+      <h3 className="card-title">Current Weather of {city.toUpperCase()}</h3>
 
       <InputDebounce
         type="text"
