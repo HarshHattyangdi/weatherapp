@@ -36,12 +36,12 @@ function CurrentWeather(props) {
       <InputDebounce
         type="text"
         placeholder="Enter City"
-        className="transparent-bg"
+        className="search-bar"
         onChange={changeHandler}
         setCity={setCity}
       />
 
-      {data && <CityWeather {...data} />}
+      {data && <CityWeather {...data} className="weahter" />}
     </div>
   );
 }

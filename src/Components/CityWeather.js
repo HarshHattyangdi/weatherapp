@@ -12,38 +12,15 @@ const CityWeather = (props) => {
   //   console.log(weather);
   return (
     <>
-      <img src={`http://openweathermap.org/img/w/${icon}.png`} alt="" />
-      <div className="weather-info">
-        {/* <h2>
-        <img
-          src={`http://http://openweathermap.org/img/w/${icon}.png`}
-          alt=""
-        />
-      </h2> */}
-
-        <h2>Feels like: {feels_like}</h2>
-        <h2>Min:{min}</h2>
-        <h2>Max:{max}</h2>
-
-        {/* <ul>
-        {Object.keys(main).map((el, idx) => {
-          return (
-            <li key={main[el] + idx}>
-              {el}:{main[el]}
-            </li>
-          );
-        })}
-      </ul> */}
-        {/* <ul>
-        {Object.keys(weather.0).map((el, idx) => {
-          return (
-            <li key={weather[el] + idx}>
-              {el}:{weather[el]}
-            </li>
-          );
-        })}
-      </ul> */}
-        {/* {JSON.stringify(weather)} */}
+      <div className={props.className}>
+        <div>
+          <img src={`http://openweathermap.org/img/w/${icon}.png`} alt="" />
+        </div>
+        <div>
+          <h2>Feels like: {feels_like}</h2>
+          <h2>Min:{min}</h2>
+          <h2>Max:{max}</h2>
+        </div>
       </div>
     </>
   );
