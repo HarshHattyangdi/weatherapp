@@ -29,3 +29,14 @@ body {
   margin: 1em;
   background-color: rgba($mycolor, 0.1);
 }
+
+.search-bar{
+  outline: none;
+  border: none;
+  background-color: rgba($mycolor, 0.1);
+  color: white;
+}
+
+input[type="text"]:focus{
+  outline: none;
+}
