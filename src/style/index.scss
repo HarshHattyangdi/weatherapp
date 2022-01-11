@@ -13,7 +13,7 @@ body {
   height: 100vh;
   align-items: center;
   background: #222;
-  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+  // background-image: url("https://source.unsplash.com/1600x900/?landscape");
   margin: 0;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,13 +30,21 @@ body {
   background-color: rgba($mycolor, 0.1);
 }
 
-.search-bar{
+.search-bar {
   outline: none;
   border: none;
   background-color: rgba($mycolor, 0.1);
   color: white;
 }
 
-input[type="text"]:focus{
+input[type="text"]:focus {
   outline: none;
+}
+
+.cold {
+  background-color: rgba(0, 81, 255, 0.671);
+}
+
+.warm {
+  background-color: rgba(255, 251, 0, 0.89);
 }

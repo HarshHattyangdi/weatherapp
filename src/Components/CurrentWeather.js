@@ -19,7 +19,7 @@ function CurrentWeather(props) {
     fetch(generateRequestString())
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log(`Current Weather Data:`, data);
         setData(data);
       })
       .catch((err) => console.log(err));
